@@ -1,0 +1,202 @@
+:root {
+  --whitesmoke: #E8E8E8;
+  --black: #121212;
+  --darkGray: #333;
+  --primaryOrange: #ee7732;
+  --orange: #f49a27;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: pointer;
+}
+
+body, html {
+  background-color: var(--whitesmoke);
+}
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3em;
+  background-color: transparent;
+  z-index: 98;
+  transition: 0.3s;
+  height: 10em;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination a {
+  padding: 0.5em 1.25em;
+  font-size: 1.75em;
+  text-decoration: none;
+  color: var(--darkGray);
+  user-select: none;
+}
+
+.pagination a:hover {
+  background-color: var(--primaryOrange);
+  color: white;
+}
+
+.logo h1 {
+  font-size: 4em;
+  color: var(--darkGray);
+  font-style: italic;
+  z-index: 100;
+  font-weight: 900;
+  /* Text Shadow Property */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--whitesmoke);
+}
+
+.logo h1 span {
+  color: var(--orange);
+}
+
+.active {
+  color: white;
+  background-color: var(--primaryOrange);
+}
+
+.scrollMode {
+  background-color: var(--whitesmoke);
+  box-shadow: 0 0.1em 0.1em gray;
+}
+
+.minimize {
+  height: 7em;
+}
+
+.scrollMode .logo h1  {
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: var(--darkGray);
+}
+
+.navbar label {
+  display: flex;
+}
+
+.navbar label div {
+  font-size: 3em;
+  color: var(--darkGray);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.waButton {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0.75em;
+  right: 0.75em;
+  z-index: 300;
+  height: 1.75em;
+  width: 1.75em;
+  font-size: 3em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #25d366;
+  border-radius: 2em;
+}
+
+.waButton:hover {
+  background-color: #128c7e;
+}
+
+.waButton:active {
+  color: var(--darkGray);
+  background-color: white;
+}
+
+#menuBtn {
+  display: none;
+}
+
+#menuIcon {
+  display: none;
+}
+
+#closeIcon {
+  display: none;
+}
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62,5%;
+  }
+
+  .navbar {
+    height: 5em;
+    padding: 0 1em;
+  }
+
+  .pagination {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    padding-top: 5em;
+    transition: 0.3s ease-out;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(-15em);
+  }
+
+  .navbar label {
+    display: flex;
+    align-items: center;
+    padding: 0.25em;
+    z-index: 110;
+  }
+  
+  .navbar label div#menuIcon {
+    display: block;
+  }
+
+  .navbar:has(input#menuBtn:checked) .pagination {
+    transform: translateX(0);
+  }
+  
+  .navbar:has(input#menuBtn:checked) #closeIcon {
+    display: block;
+  }
+
+  .navbar:has(input#menuBtn:checked) #menuIcon {
+    display: none;
+  }
+
+  .navbar .logo h1 {
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: var(--darkGray);
+  }
+  
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

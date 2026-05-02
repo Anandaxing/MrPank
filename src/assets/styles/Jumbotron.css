@@ -1,0 +1,80 @@
+:root {
+  --whitesmoke: #E8E8E8;
+  --black: #121212;
+  --darkGray: #333;
+  --primaryOrange: #ee7732;
+  --orange: #f49a27;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+  margin-bottom: 2em;
+}
+
+.jumbotronTitle {
+  padding: 0 3em;
+  width: 60%;
+}
+
+.jumbotronTitle h1.title {
+  font-size: 4em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1.title span {
+  background-color: var(--primaryOrange);
+  color: white;
+  padding: 0.1em;
+}
+
+.jumbotronTitle p {
+  font-size: 1.75em;
+}
+
+.jumbotronImage {
+  width: max-content;
+  display: flex; 
+  box-shadow: 0 0 0.75em var(--darkGray);
+}
+
+.jumbotronImage img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+/* laptop */
+@media (max-width: 1366px) {
+  .jumbotronTitle {
+    width: 60%;
+  }
+
+  .jumbotronImage {
+    width: 60%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .jumbotron {
+    flex-direction: column;
+    height: fit-content;
+    margin: 10em 0;
+    justify-content: center;
+  }
+
+  .jumbotronTitle {
+    width: 100%;
+    margin: 3em 0;
+  }
+
+  .jumbotronImage {
+    width: 70%;
+    height: auto;
+  }
+}

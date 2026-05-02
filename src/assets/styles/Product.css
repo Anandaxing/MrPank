@@ -1,0 +1,143 @@
+:root {
+  --whitesmoke: #E8E8E8;
+  --black: #121212;
+  --darkGray: #333;
+  --primaryOrange: #ee7732;
+  --orange: #f49a27;
+}
+
+.productSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--darkGray);
+  margin: 4em 2em;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.heading h1 {
+  font-size: 3.75em;
+  border-bottom: 0.5px solid var(--darkGray);
+  margin: 0;
+}
+
+.heading p {
+  font-size: 1.75em;
+}
+
+.contents {
+  display: flex;
+  max-width: 100em;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.content { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 1.5em;
+}
+
+.content h2 {
+  font-size: 2.25em;
+}
+
+.productImageContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2em;
+  box-shadow: 0 0 0.3em gray;
+}
+
+.productImageContainer:hover {
+  box-shadow: 0.1em 0.1em 0.5em gray, -0.1em -0.1em 0.5em white;
+}
+
+.productImageContainer:hover.productImageContainer p {
+  transform: translateY(0);
+}
+
+.productImageContainer p {
+  transition: 0.2s ease-in-out;
+  font-size: 1.75em;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1em 0;
+  margin: 0;
+  text-align: center;
+  transform: translateY(10em);
+}
+
+.productImageContainer img {
+  width: 30em;
+  height: 40em;
+  object-fit: cover;
+}
+
+.productSection a {
+  color: white;
+  background-color: var(--primaryOrange);
+  padding: 0.75em 1.5em;
+  font-size: 2em;
+  text-decoration: none;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.productSection a span {
+  padding-left: 0.5em;
+}
+
+.productSection a:hover {
+  box-shadow: 0.1em 0.1em 0.1em gray,
+  -0.1em -0.1em 0.1em lightgray;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .content {
+    margin: 1em;
+  }
+
+  .productImageContainer img {
+    width: 25em;
+    height: 37.5em;
+  }
+
+  .productImageContainer p {
+    transform: translateX(0);
+  }
+
+  .productImageContainer img {
+    width: 40em;
+  }
+
+  .contents {
+    justify-content: center;
+  }
+}
+
+/* Phone
+@media (max-width: 450px) {
+  .contents {
+    justify-content: center;
+  }
+
+  .productImageContainer img {
+    width: 40em;
+  }
+} */

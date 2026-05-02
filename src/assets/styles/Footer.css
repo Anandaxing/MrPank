@@ -1,0 +1,65 @@
+:root {
+  --whitesmoke: #E8E8E8;
+  --black: #121212;
+  --darkGray: #333;
+  --primaryOrange: #ee7732;
+  --orange: #f49a27;
+}
+
+.footer {
+  padding: 2em 0;
+  background-color: var(--darkGray);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerMedia {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+}
+
+.footerMedia a {
+  width: 1.75em;
+  height: 1.75em;
+  border: 0.2px solid white;
+  color: white;
+  border-radius: 10em;
+  text-decoration: none;
+  font-size: 2.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.25em 1em 0.25em;
+}
+
+.footerMedia a:hover {
+  background-color: white;
+  color: var(--darkGray);
+}
+
+.footerPagination {
+  margin-bottom: 1em;
+}
+
+.footerPagination a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  padding: 0.25em 0.75em;
+}
+
+.footerPagination a:hover {
+  color: var(--primaryOrange);
+}
+
+.copyright p {
+  font-size: 1.25em;
+}
+
+.copyright p span {
+  color: var(--primaryOrange);
+  font-weight: 600;
+}
